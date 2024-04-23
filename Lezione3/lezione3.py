@@ -77,5 +77,185 @@ print(f"{Kinds[:3]} the first three items in the list are") #:3= per i primi tre
 print(f"{Kinds[1:4]} three items from the middle of the list are")#: = con i 2 punti stiamo prndendo i valori compresi  da 1 (per esempio) a 4(perchè lultima posizione come nel range non la prende)
 print(f"{Kinds[-3:]} the last three items in the list are")# -3= per gli ultimi tre argomenti della lista
 
+#4-11. My Pizzas, Your Pizzas: Start with your program from Exercise 4-1. 
+#Make a copy of the list of pizzas, and call it friend_pizzas. Then, do the following:
+#• Add a new pizza to the original list.
+#• Add a different pizza to the list friend_pizzas.
+#• Prove that you have two separate lists. Print the message My favorite pizzas are:, 
+#and then use a for loop to print the first list. Print the message My friend’s favorite pizzas are:, 
+#and then use a for loop to print the second list. 
+#Make sure each new pizza is stored in the appropriate list.
+Kinds: list=["Margherita", "Diavola","Boscaiola"]
+friend_pizza: list= Kinds.copy()
+print(friend_pizza)
+Kinds.append("Patate")
+friend_pizza.append("Nutella")
+print(f"My favorite pizzas are: ", end='')
+for pizza in Kinds:
+      print(f'{pizza} ', end="")
+print() #lo utilizzo per tornare a capo ne terminale
+print("My friend’s favorite pizzas are:", end="")
+for friend in friend_pizza:
+      print(f"{friend}", end=" ")
+print()
 
- 
+
+#4-12. More Loops: All versions of foods.py in this section have avoided using for loops when printing, to save space. 
+#Choose a version of foods.py, and write two for loops to print each list of foods.
+
+#5-1. Conditional Tests: Write a series of conditional tests. Print a statement
+#describing each test and your prediction for the results of each test. Your code
+#should look something like this:
+#car = 'subaru'
+#print("Is car == 'subaru'? I predict True.")
+#print(car == 'subaru')
+#print("\nIs car == 'audi'? I predict False.")
+#print(car == 'audi')
+#• Look closely at your results, and make sure you understand why each line
+#evaluates to True or False.
+#• Create at least 10 tests. Have at least 5 tests evaluate to True and another
+#5 tests evaluate to False.
+football: str="like"
+if football == "like":
+      print("Football like")
+elif football == "Ok":
+      print("football Ok")
+else:
+    print("false")
+
+#5-2. More Conditional Tests: You don’t have to limit the number of tests you cre-
+#ate to 10. If you want to try more comparisons, write more tests and add them
+#to conditional_tests.py. Have at least one True and one False result for each of
+#the following:
+#• Tests for equality and inequality with strings
+#• Tests using the lower() method
+#• Numerical tests involving equality and inequality, greater than and less
+#than, greater than or equal to, and less than or equal to
+#• Tests using the and keyword and the or keyword
+#• Test whether an item is in a list
+#• Test whether an item is not in a list
+Z: str="Zeta"
+Z1: str="ZETA"
+if Z==Z1 :
+      print("false")
+elif Z != Z1:
+      print("true")      
+z: str= "zEta"
+print(z.lower())
+x: int="2"
+y: int="4"
+if x ==y :
+      print("False")
+elif x != y :
+      print("True")
+a: int=4
+b: int=8
+if a==b:
+      print("false")
+else:
+    print("true")
+if a>b:
+        print("false")
+elif a<b:
+        print("true")
+if a>=b:
+        print("false")
+elif a<=b:
+        print("true")
+
+sport:list=["calcio", " golf", "tennis", "badminton"]
+if "calcio" in sport:
+      print(True)
+else:
+      print(False)
+
+if "cricket" in sport:
+      print(True)
+else:
+      print(False)
+
+#5-3. Alien Colors #1: Imagine an alien was just shot down in a game. 
+#Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
+#• Write an if statement to test whether the alien’s color is green.
+#If it is, print a message that the player just earned 5 points.
+#• Write one version of this program that passes the if test and another that fails. 
+#(The version that fails will have no output.)
+
+alien_color: str= "green"
+if alien_color == "green":
+      print(True)
+else:
+      print(False)
+print("So the player just earned 5 points")
+
+#5-4. Alien Colors #2: Choose a color for an alien as you did in Exercise 5-3, and write an if-else chain.
+#• If the alien’s color is green, print a statement that the player just earned 5 points for shooting the alien.
+#• If the alien’s color isn’t green, print a statement that the player just earned 10 points.
+#• Write one version of this program that runs the if block and another that runs the else block.
+alien_color: str="yellow"
+if alien_color == "green":
+        print("the player just earned 5 points for shooting the alien.")
+else:
+      print("the player just earned 10 points.")
+
+#5-5. Alien Colors #3: Turn your if-else chain from Exercise 5-4 into an if-elif-else chain.
+#• If the alien is green, print a message that the player earned 5 points.
+#• If the alien is yellow, print a message that the player earned 10 points.
+#• If the alien is red, print a message that the player earned 15 points.
+#• Write three versions of this program, making sure each message is printed for the appropriate color alien.
+alien_color: str="yellow"
+if alien_color == "green":
+        print("the player just earned 5 points for shooting the alien.")
+elif alien_color == "yellow":
+      print("the player earned 10 points.")
+elif alien_color == "red":
+      print("the player earned 15 points.")
+
+#5-6. Stages of Life: Write an if-elif-else chain that determines a person’s stage of life. Set a value for the variable age, nd then:
+#• If the person is less than 2 years old, print a message that the person is a baby.
+#• If the person is at least 2 years old but less than 4, print a message that the person is a toddler.
+#• If the person is at least 4 years old but less than 13, print a message that the person is a kid.
+#• If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
+#• If the person is at least 20 years old but less than 65, print a message that the person is an adult.
+#• If the person is age 65 or older, print a message that the person is an elder.
+age=1
+if age < 2:
+      print("the person is a baby")
+age=3
+if age>=2 and age<4 :
+      print("the person is a toddler.")
+age=7
+if age>=7 and age<13 :
+    print("the person is a kid.")
+
+#5-7. Favorite Fruit: Make a list of your favorite fruits, 
+#and then write a series of independent if statements that check for certain fruits in your list.
+#• Make a list of your three favorite fruits and call it favorite_fruits.
+#• Write five if statements. Each should check whether a certain kind of fruit is in your list. 
+#if the fruit is in your list, the if block should print a statement, such as You really like Apples!
+fruit: list=["apple", "banana", "mango", "pear"]
+if "apple" in fruit:
+      print("there is")
+favorite_fruit: list=["strawberry", "melon", "orange", "apple"]
+if "apple" in fruit and favorite_fruit:
+      print(True)
+
+#5-8. Hello Admin: Make a list of five or more usernames, including the name 'admin'. 
+#Imagine you are writing code that will print a greeting to each user after they log in to a website. 
+#Loop through the list, and print a greeting to each user.
+#• If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
+#• Otherwise, print a generic greeting, such as Hello Jaden, thank you for logging in again.
+username: list=["fice", "admin","brigno","polpo", "elle"]
+for user in username:
+      print("welcome")
+if "admin" in username:
+      print("Hello admin")
+else:
+      print("hello general")
+
+
+
+
+
+
+      
