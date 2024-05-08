@@ -311,3 +311,11 @@ for i in numbers:
             print("8th")
       elif i=="9":
             print("9th")
+
+
+#definizione di una funzione che fa una somma
+def add(num1: int, num2: int) -> int:
+      result=num1+num2
+      return result
+mysum= add(3, 7)
+print(mysum)
