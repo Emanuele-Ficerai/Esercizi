@@ -18,5 +18,16 @@ class Prodotto:
         self.quantità: int = quantità
 
 class Magazzino:
-    def aggiungi_prodotto(self, prodotti: list[Prodotto]):
-        self.
+    def __init__(self, prodotti: list[Prodotto] = []) -> None:
+        self.prodotti: list = prodotti
+    def aggiungi_prodotto(self, prodotto: Prodotto):
+        self.prodotto.append(prodotto)
+    def cerca_prodotto(self, nome: str) -> Prodotto:
+        self.nome: str = nome
+        for prodotti in Prodotto:
+            if prodotti.nome in Prodotto:
+                return prodotti.nome
+    def verifica_disponibilità(self, nome: str) -> str:
+        self.nome: str = nome
+        if self.nome in Prodotto:
+            return "disponibile"
