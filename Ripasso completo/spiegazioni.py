@@ -7,7 +7,7 @@ nome_variabile: int = 10.0
 nome_variabile: str = "lazio" #con il sigolo o con il doppio apice, è la stessa cosa
 # esempio con float, numero con la virgola finito, massimo 32 bit
 nome_variabile: float = 10.1
-#esempio con bool, cioè o vero o falso
+#esempio con bool, cioè o vero o falso, si utlizza anche per asegnare un valore ad una variabile
 nome_variabile: bool = True
 nome_variabile: bool = False
 #una stessa variabile può cambiare il valore all'interno dello stesso codice, e solo in python possiamo cambiargli anche il tipo
